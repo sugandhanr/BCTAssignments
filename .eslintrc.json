@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "cypress"
+  ],
+  "extends": [
+    "plugin:cypress/recommended",
+    "@edx/eslint-config"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
+  "env": {
+    "cypress/globals": true
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
+    "prefer-arrow-callback": 0,
+    "func-names": ["error", "never"]
+  }
+}
